@@ -1,0 +1,9 @@
+.classpath
+.idea/
+.gradle/
+.project
+.settings/
+.vscode/
+bin/
+build/
+JenkinsSharedLibrary.iml

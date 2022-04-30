@@ -1,0 +1,21 @@
+{
+    "DENODO_HOST": "https://denodoprod:19443",
+    "DENODO_IMRS_PASSWORD": "QCK8Gct,}{",
+    "DENODO_IMRS_USER": "cs-d365integration",
+    "DENODO_STRATEGY_PASSWORD": "Western1",
+    "DENODO_STRATEGY_USER": "denodo_strategy_master_api_user",
+    "DENODO_US_LEGG_PASSWORD": "western1",
+    "DENODO_US_LEGG_USER": "test_user1",
+    "DYNAMICS_CLIENT_ID": "aba9be60-fe1a-4731-8156-b8be82c0b34f",
+    "DYNAMICS_CLIENT_SECRET": "BUmNxVW9N2ExJBlGxGNppELYzibb7QUKzBp2cCI1iBY=",
+    "DYNAMICS_ENVIRONMENT": "wam",
+    "DYNAMICS_PASSWORD": "SIpQ!U*$w6hcL3*e",
+    "DYNAMICS_TENANT_ID": "7e05dc02-7269-47f4-ba65-3a98aef5479b",
+    "DYNAMICS_USER": "wamintegration@westernassetmgmt.onmicrosoft.com",
+    "IO_DATA_DIRECTORY": "/io/data",
+    "IO_LOG_DIRECTORY": "/io/logs",
+    "IO_MAP_DIRECTORY": "/io/maps",
+    "ORACLE_CRPROFILE_CONNECTSTRING": "USER=crprofile;PWD=c010rcrp;HOST=crprd1-vip;PORT=1521;SERVICE_NAME=crprd.westernasset.com",
+    "STRATEGY_MASTER_DB_CONNECTSTRING": "DRIVER=FreeTDS;SERVER=prodwonyxsql1.wam.westernasset.local;UID=PrdMstDbo;PWD=:jNDWIxVr3;DATABASE=ProductMaster;TDS_Version=auto;PORT=1433;",
+    "DEFAULT_PW_HOST": "http://externalweb"
+}

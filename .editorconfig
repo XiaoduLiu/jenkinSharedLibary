@@ -1,0 +1,4 @@
+root  = true
+[*.groovy]
+insert_final_newline = true
+trim_trailing_whitespace = true
