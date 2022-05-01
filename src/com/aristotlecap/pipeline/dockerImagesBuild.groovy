@@ -36,8 +36,10 @@ def build(config) {
               docker.withRegistry("https://${env.DOCKER_RELEASES}", "${env.DOCKER_RELEASES_CRED}") {
                 sh """
                   cd $folder
-                  sleep 600
                   ls -la
+                  docker version
+                  sleep 5m
+                  docker version
                   docker build -t $v -f ./$dockerfile .
                   docker tag $v $env.DOCKER_RELEASES/$v
                   docker push $env.DOCKER_RELEASES/$v
