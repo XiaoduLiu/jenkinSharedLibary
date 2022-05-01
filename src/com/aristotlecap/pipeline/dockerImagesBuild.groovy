@@ -29,14 +29,14 @@ def build(config) {
             config.dockerfileMap.each { k, v ->
               println "${k}:${v}"
 
-              //String folder = k.split("/")[0]
-              //String dockerfile = k.split("/")[1]
-              //println "${folder}"
-              //sh """
-              //  cd $folder
-              //  ls -la
-              //  docker build -t $v -f ./$dockerfile .
-              //"""
+              String folder = k.split("/")[0]
+              String dockerfile = k.split("/")[1]
+              println "${folder}"
+              sh """
+                cd $folder
+                ls -la
+                docker build -t $v -f ./$dockerfile .
+              """
             }
           }
         }
