@@ -2,6 +2,7 @@ package com.aristotlecap.pipeline;
 
 def build(config) {
   withFolderProperties {
+    echo("Foo: ${env.TOOL_DOCKER}")
     podTemplate(
             cloud: 'us-west-2-devops',
             serviceAccount: 'jenkins',
