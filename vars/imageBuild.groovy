@@ -8,7 +8,7 @@ def call(body) {
   body.delegate = config
   body()
 
-  def lockLabel = "${env.lockLabel}"
+  def lockLabel = "${lockLabel}"
   echo lockLabel
 
   def build = new com.aristotlecap.pipeline.dockerImagesBuild()
