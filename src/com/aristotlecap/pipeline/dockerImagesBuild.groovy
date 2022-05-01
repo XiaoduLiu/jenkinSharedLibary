@@ -2,8 +2,6 @@ package com.aristotlecap.pipeline;
 
 def build(config) {
 
-  def commons = new com.aristotlecap.pipeline.Commons()
-
   withFolderProperties {
     echo("Foo: ${env.TOOL_DOCKER}")
     podTemplate(
@@ -21,8 +19,9 @@ def build(config) {
             ]) {
       node(POD_LABEL) {
         stage('Clone') {
-          repo = commons.clone()
-          print repo
+          deleteDir()
+          checkout scm
+          sh "ls -la"
         }
         stage('docker') {
           print config
