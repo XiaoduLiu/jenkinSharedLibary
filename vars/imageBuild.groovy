@@ -12,6 +12,7 @@ def call(body) {
     echo lockLabel
     def build = new com.aristotlecap.pipeline.dockerImagesBuild()
     if (lockLabel != 'null') {
+      echo "locked here -> ${env.lockLabel}"
       lock(label: "${lockLabel}") {
         build.build(config)
       }
