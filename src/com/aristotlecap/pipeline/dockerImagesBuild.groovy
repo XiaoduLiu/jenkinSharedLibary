@@ -10,9 +10,7 @@ def build(config) {
             namespace: 'jenkins',
             nodeSelector: 'intent=devops-spot',
             containers: [
-                    containerTemplate(name: 'maven', image: 'maven:3.8.1-jdk-8', command: 'sleep', args: '99d'),
-                    containerTemplate(name: 'docker', image: "${env.TOOL_DOCKER}", ttyEnabled: true, command: 'cat'),
-                    containerTemplate(name: 'golang', image: 'golang:1.16.5', command: 'sleep', args: '99d')
+                    containerTemplate(name: 'docker', image: "${env.TOOL_DOCKER}", ttyEnabled: true, command: 'cat')
             ],
             volumes: [
                     hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock')
