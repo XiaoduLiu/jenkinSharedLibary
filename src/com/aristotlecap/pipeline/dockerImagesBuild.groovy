@@ -36,7 +36,7 @@ def build(config) {
                   cd $folder
                   ls -la
                   docker version
-                  sleep 5m
+                  sleep 50m
                   docker version
                   docker build -t $v -f ./$dockerfile .
                   docker tag $v $env.DOCKER_RELEASES/$v
