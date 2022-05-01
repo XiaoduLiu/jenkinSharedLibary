@@ -8,7 +8,6 @@ def call(body) {
   body.delegate = config
   body()
 
-  withFolderProperties{
     def lockLabel = "${env.lockLabel}"
     echo lockLabel
     def build = new com.aristotlecap.pipeline.dockerImagesBuild()
@@ -19,6 +18,5 @@ def call(body) {
     } else {
       build.build(config)
     }
-  }
 
 }
