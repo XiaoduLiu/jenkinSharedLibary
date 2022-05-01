@@ -1,6 +1,9 @@
 package com.aristotlecap.pipeline;
 
 def build(config) {
+
+  def commons = new com.aristotlecap.pipeline.Commons()
+
   withFolderProperties {
     echo("Foo: ${env.TOOL_DOCKER}")
     podTemplate(
@@ -17,10 +20,12 @@ def build(config) {
                     hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock')
             ]) {
       node(POD_LABEL) {
-        stage('Get a Maven project') {
-          sh "ls -la"
+        stage('Clone') {
+          repo = commons.clone()
+          print repo
         }
         stage('docker') {
+          print config
           container('docker') {
             sh 'docker version'
           }
