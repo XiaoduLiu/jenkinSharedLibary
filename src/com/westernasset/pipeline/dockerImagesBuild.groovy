@@ -21,7 +21,6 @@ podTemplate(
           stage('docker') {
             container('docker') {
               sh 'docker version'
-              sh 'docker pull docker.devops.aws.aristotlecap.com/repository/docker-group/ubuntu:18.04'
             }
           }
     }
