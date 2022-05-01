@@ -18,7 +18,7 @@ def call(body) {
     config.dashboardDeploymentOnly = false
   }
 
-  def build = new com.westernasset.pipeline.monitoring()
+  def build = new com.aristotlecap.pipeline.monitoring()
 
   if (lockLabel != 'null') {
     lock(label: "${lockLabel}")  {

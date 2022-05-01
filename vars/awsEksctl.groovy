@@ -1,7 +1,7 @@
 #!/usr/bin/groovy
 
-import com.westernasset.pipeline.steps.*
-import com.westernasset.pipeline.builds.*
+import com.aristotlecap.pipeline.steps.*
+import com.aristotlecap.pipeline.builds.*
 import net.sf.json.JSONObject
 
 def call(body) {

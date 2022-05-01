@@ -23,7 +23,7 @@ def call(body) {
      prodAccountsString = prodAccountsArray.join("\n")
   }
 
-  def build = new com.westernasset.pipeline.awsSAMBuild()
+  def build = new com.aristotlecap.pipeline.awsSAMBuild()
 
   echo "working in side the call(body)"
 

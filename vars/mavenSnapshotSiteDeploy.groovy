@@ -43,7 +43,7 @@ def mavenSnapshotSiteDeployLogic(gitBranchName, buildNumber,builderTag,
       persistentVolumeClaim(claimName: 'jenkins-agent-ssh-nonprod', mountPath: '/home/jenkins/.ssh')
     ]) {
     node(label) {
-      def commons = new com.westernasset.pipeline.Commons()
+      def commons = new com.aristotlecap.pipeline.Commons()
       try {
         stage ('Maven Snapshot Site-Deploy') {
           // Clean workspace before doing anything

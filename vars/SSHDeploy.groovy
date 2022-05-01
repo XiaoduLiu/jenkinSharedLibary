@@ -95,9 +95,9 @@ def call(body) {
      postStartServerLocalCmdsString = postStartServerLocalCmdsArray.join("\n")
   }
 
-  def build = new com.westernasset.pipeline.SSHDeployBuild()
+  def build = new com.aristotlecap.pipeline.SSHDeployBuild()
 
-  def commons = new com.westernasset.pipeline.Commons()
+  def commons = new com.aristotlecap.pipeline.Commons()
   def nonProdHostsMapString = commons.getStringFromMap(config.nonProdHostsMap)
 
   if (lockLabel != 'null') {

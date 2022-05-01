@@ -17,7 +17,7 @@ def call(body) {
   def lockLabel = "${env.lockLabel}"
   echo lockLabel
 
-  def build = new com.westernasset.pipeline.awsSftpTransferUsers()
+  def build = new com.aristotlecap.pipeline.awsSftpTransferUsers()
 
   if (lockLabel != 'null') {
     lock(label: "${lockLabel}")  {

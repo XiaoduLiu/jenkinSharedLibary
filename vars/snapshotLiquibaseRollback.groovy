@@ -48,7 +48,7 @@ def call(body) {
 
 def snapshotRollbackLogic(gitScm, gitBranchName, gitCommit, liquibaseChangeLog, liquibaseBuilderTag,
                           organizationName, appGitRepoName,deployEnv,liquibaseRollbackTag, templates) {
-  def commons = new com.westernasset.pipeline.Commons()
+  def commons = new com.aristotlecap.pipeline.Commons()
   def appRoleName = organizationName + '-' + appGitRepoName + '-nonprod'
 
   def label = "agent-${UUID.randomUUID().toString()}"

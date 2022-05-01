@@ -1,4 +1,4 @@
-package com.westernasset.pipeline
+package com.aristotlecap.pipeline
 
 import com.lesfurets.jenkins.unit.BasePipelineTest
 import org.junit.*
@@ -14,7 +14,7 @@ class CommonsTest extends BasePipelineTest {
     @Override
     @Before
     void setUp() {
-        scriptRoots += 'src/com/westernasset/pipeline'
+        scriptRoots += 'src/com.aristotlecap/pipeline'
         helper.registerAllowedMethod('container', [String.class, Closure.class], null)
         super.setUp()
         commons = loadScript('Commons.groovy')

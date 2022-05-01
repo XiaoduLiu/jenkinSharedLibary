@@ -35,12 +35,12 @@ def call(body) {
      secretsString = secretsArray.join("\n")
   }
 
-  def commons = new com.westernasset.pipeline.Commons()
+  def commons = new com.aristotlecap.pipeline.Commons()
 
   def accountAppfileMapString = commons.getStringFromMap(config.accountAppfileMap)
   def appfileStackMapString = commons.getStringFromMap(config.appfileStackMap)
 
-  def build = new com.westernasset.pipeline.awsCDKBuild()
+  def build = new com.aristotlecap.pipeline.awsCDKBuild()
 
   if (lockLabel != 'null') {
     lock(label: "${lockLabel}")  {

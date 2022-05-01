@@ -29,10 +29,10 @@ def call(body) {
      appArtifactsString = appArtifactsArray.join("\n")
   }
 
-  def commons = new com.westernasset.pipeline.Commons()
+  def commons = new com.aristotlecap.pipeline.Commons()
   def S3KeyMapString = commons.getStringFromMap(config.S3KeyMap)
   
-  def build = new com.westernasset.pipeline.sbtS3DeployBuild()
+  def build = new com.aristotlecap.pipeline.sbtS3DeployBuild()
 
   if (lockLabel != 'null') {
     lock(label: "${lockLabel}")  {

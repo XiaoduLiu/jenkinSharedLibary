@@ -29,7 +29,7 @@ def call(body) {
      continuousDeploymentEnvsString = continuousDeploymentEnvsArray.join("\n")
   }
 
-  def build = new com.westernasset.pipeline.sqitchBuild()
+  def build = new com.aristotlecap.pipeline.sqitchBuild()
 
   if (lockLabel != 'null') {
     lock(label: "${lockLabel}")  {

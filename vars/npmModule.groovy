@@ -11,9 +11,9 @@ def call(body) {
   def lockLabel = "${env.lockLabel}"
   echo lockLabel
 
-  def commons = new com.westernasset.pipeline.Commons()
+  def commons = new com.aristotlecap.pipeline.Commons()
 
-  def build = new com.westernasset.pipeline.npmModuleBuild()
+  def build = new com.aristotlecap.pipeline.npmModuleBuild()
 
   if (lockLabel != 'null') {
     lock(label: "${lockLabel}")  {

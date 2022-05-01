@@ -14,7 +14,7 @@ def call(body) {
   def lockLabel = "${env.lockLabel}"
   echo lockLabel
 
-  def build = new com.westernasset.pipeline.scriptExecutor()
+  def build = new com.aristotlecap.pipeline.scriptExecutor()
 
   if (lockLabel != 'null') {
     lock(label: "${lockLabel}")  {

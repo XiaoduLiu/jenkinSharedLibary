@@ -14,7 +14,7 @@ def call(body) {
   def lockLabel = "${env.lockLabel}"
   echo lockLabel
 
-  def build = new com.westernasset.pipeline.confluentConnector()
+  def build = new com.aristotlecap.pipeline.confluentConnector()
 
   if (lockLabel != 'null') {
     lock(label: "${lockLabel}")  {

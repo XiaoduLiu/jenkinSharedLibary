@@ -1,7 +1,7 @@
 #!/usr/bin/groovy
 
 import java.lang.String
-import com.westernasset.pipeline.models.*
+import com.aristotlecap.pipeline.models.*
 
 def call(body) {
   def config = [:]
@@ -18,7 +18,7 @@ def call(body) {
      nonProdEnvString = nonProdEnvArray.join("\n")
   }
 
-  def commons = new com.westernasset.pipeline.Commons()
+  def commons = new com.aristotlecap.pipeline.Commons()
   def qaEnvsArray = commons.getQaEnv(config.qaEnvs)
 
   def qaEnvsString = "null"
@@ -38,7 +38,7 @@ def call(body) {
     postDeployStepsString = postDeployStepsArray.join("\n")
   }
 
-  def build = new com.westernasset.pipeline.helmDeployBuild()
+  def build = new com.aristotlecap.pipeline.helmDeployBuild()
 
   Validation validation = new Validation()
 

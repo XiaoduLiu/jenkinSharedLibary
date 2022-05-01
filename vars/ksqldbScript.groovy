@@ -14,7 +14,7 @@ def call(body) {
   def lockLabel = "${env.lockLabel}"
   echo lockLabel
 
-  def build = new com.westernasset.pipeline.ksqldbScript()
+  def build = new com.aristotlecap.pipeline.ksqldbScript()
 
   if (lockLabel != 'null') {
     lock(label: "${lockLabel}")  {

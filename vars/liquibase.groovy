@@ -30,9 +30,9 @@ def call(body) {
     buildStepsString = buildStepsArray.join("\n")
   }
 
-  def build = new com.westernasset.pipeline.liquibaseBuild()
+  def build = new com.aristotlecap.pipeline.liquibaseBuild()
 
-  def commons = new com.westernasset.pipeline.Commons()
+  def commons = new com.aristotlecap.pipeline.Commons()
   def templatesMapString = commons.getStringFromMap(config.templates)
 
   println "templatesMapString ->" + templatesMapString

@@ -6,7 +6,7 @@ def call(body) {
   body.delegate = config
   body()
 
-  def build = new com.westernasset.pipeline.operationRelease.opsRelease()
+  def build = new com.aristotlecap.pipeline.operationRelease.opsRelease()
 
   lock("${params.prodEnv}") {
     build.build(

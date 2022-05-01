@@ -33,7 +33,7 @@ def call(body) {
      secretsString = secretsArray.join("\n")
   }
 
-  def build = new com.westernasset.pipeline.onboard.ssh_commons()
+  def build = new com.aristotlecap.pipeline.onboard.ssh_commons()
 
   if (lockLabel != 'null') {
     lock(label: "${lockLabel}")  {

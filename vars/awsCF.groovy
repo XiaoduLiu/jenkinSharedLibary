@@ -23,13 +23,13 @@ def call(body) {
      prodAccountsString = prodAccountsArray.join("\n")
   }
 
-  def commons = new com.westernasset.pipeline.Commons()
+  def commons = new com.aristotlecap.pipeline.Commons()
 
   def accountAppfileMapString = commons.getStringFromMap(config.accountAppfileMap)
   def appfileStackMapString = commons.getStringFromMap(config.appfileStackMap)
   def parametersOverridesMapString = commons.getStringFromMap(config.parametersOverridesMap)
 
-  def build = new com.westernasset.pipeline.awsCFBuild()
+  def build = new com.aristotlecap.pipeline.awsCFBuild()
 
   if (lockLabel != 'null') {
     lock(label: "${lockLabel}")  {

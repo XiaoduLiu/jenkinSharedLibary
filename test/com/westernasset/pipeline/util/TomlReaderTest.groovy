@@ -1,7 +1,7 @@
-package com.westernasset.pipeline.steps
+package com.aristotlecap.pipeline.steps
 
 import com.lesfurets.jenkins.unit.BasePipelineTest
-import com.westernasset.pipeline.models.GitRepository
+import com.aristotlecap.pipeline.models.GitRepository
 import org.junit.*
 import org.yaml.snakeyaml.Yaml
 
@@ -15,7 +15,7 @@ class TomlReaderTest extends BasePipelineTest {
     @Override
     @Before
     void setUp() {
-        scriptRoots += 'src/com/westernasset/pipeline'
+        scriptRoots += 'src/com.aristotlecap/pipeline'
         super.setUp()
         script = loadScript('util/TomlReader.groovy')
     }

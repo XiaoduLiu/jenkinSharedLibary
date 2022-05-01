@@ -1,4 +1,4 @@
-package com.westernasset.pipeline.models
+package com.aristotlecap.pipeline.models
 
 import com.lesfurets.jenkins.unit.BasePipelineTest
 import org.junit.*

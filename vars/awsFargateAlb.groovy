@@ -11,7 +11,7 @@ def call(body) {
   def lockLabel = "${env.lockLabel}"
   echo lockLabel
 
-  def build = new com.westernasset.pipeline.awsFargateAlb()
+  def build = new com.aristotlecap.pipeline.awsFargateAlb()
 
   if (lockLabel != 'null') {
     lock(label: "${lockLabel}")  {

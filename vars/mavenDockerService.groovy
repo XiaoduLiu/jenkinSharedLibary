@@ -17,7 +17,7 @@ def call(body) {
      nonProdEnvString = nonProdEnvArray.join("\n")
   }
   
-  def commons = new com.westernasset.pipeline.Commons()
+  def commons = new com.aristotlecap.pipeline.Commons()
   def qaEnvsArray = commons.getQaEnv(config.qaEnvs)
 
   def qaEnvsString = "null"
@@ -37,7 +37,7 @@ def call(body) {
      secretsString = secretsArray.join("\n")
   }
 
-  def build = new com.westernasset.pipeline.mavenDockerServiceBuild()
+  def build = new com.aristotlecap.pipeline.mavenDockerServiceBuild()
 
   if (lockLabel != 'null') {
     lock(label: "${lockLabel}")  {

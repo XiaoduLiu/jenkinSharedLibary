@@ -1,8 +1,8 @@
 #!/usr/bin/groovy
 
-import com.westernasset.pipeline.builds.*
-import com.westernasset.pipeline.steps.*
-import com.westernasset.pipeline.models.*
+import com.aristotlecap.pipeline.builds.*
+import com.aristotlecap.pipeline.steps.*
+import com.aristotlecap.pipeline.models.*
 
 def call(body) {
   def config = [:]

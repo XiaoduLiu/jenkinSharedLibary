@@ -1,6 +1,6 @@
-package com.westernasset.pipeline.steps
+package com.aristotlecap.pipeline.steps
 
-import com.westernasset.pipeline.models.*
+import com.aristotlecap.pipeline.models.*
 import com.lesfurets.jenkins.unit.BasePipelineTest
 import org.junit.*
 import org.yaml.snakeyaml.Yaml
@@ -16,7 +16,7 @@ class VaultTest extends BasePipelineTest {
     @Override
     @Before
     void setUp() throws Exception {
-        scriptRoots += 'src/com/westernasset/pipeline'
+        scriptRoots += 'src/com.aristotlecap/pipeline'
         super.setUp()
         helper.registerAllowedMethod('withEnv', [List.class, Closure.class], null)
         script = loadScript('steps/Vault.groovy')

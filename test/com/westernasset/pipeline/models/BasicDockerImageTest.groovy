@@ -1,7 +1,7 @@
-package com.westernasset.pipeline.models
+package com.aristotlecap.pipeline.models
 
 import com.lesfurets.jenkins.unit.BasePipelineTest
-import com.westernasset.pipeline.models.GitRepository
+import com.aristotlecap.pipeline.models.GitRepository
 import org.junit.*
 import org.yaml.snakeyaml.Yaml
 

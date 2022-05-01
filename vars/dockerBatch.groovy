@@ -53,7 +53,7 @@ def call(body) {
      buildTimeSecretsString = buildTimeSecretsArray.join("\n")
   }
 
-  def build = new com.westernasset.pipeline.dockerBatchBuild()
+  def build = new com.aristotlecap.pipeline.dockerBatchBuild()
 
   if (lockLabel != 'null') {
     lock(label: "${lockLabel}")  {

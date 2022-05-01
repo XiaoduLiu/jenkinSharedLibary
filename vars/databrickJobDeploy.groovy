@@ -11,9 +11,9 @@ def call(body) {
   def lockLabel = "${env.lockLabel}"
   echo lockLabel
 
-  def build = new com.westernasset.pipeline.databrickJobDeployBuild()
+  def build = new com.aristotlecap.pipeline.databrickJobDeployBuild()
 
-  def commons = new com.westernasset.pipeline.Commons()
+  def commons = new com.aristotlecap.pipeline.Commons()
 
   def jobIdsNonprodString = 'null'
   def jobIdsNonProdMap = config.jobIdsNonprod

@@ -87,7 +87,7 @@ def deployLogic(gitScm, gitBranchName, gitCommit, buildNumber, deployEnv,
                 releaseImageTag, dockerParameters, appArguments) {
   node('agent') {
 
-    def commons = new com.westernasset.pipeline.Commons()
+    def commons = new com.aristotlecap.pipeline.Commons()
     try {
       // Clean workspace & check out the GIT
       deleteDir()

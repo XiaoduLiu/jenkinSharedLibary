@@ -35,7 +35,7 @@ def call(body) {
      secretsString = secretsArray.join("\n")
   }
 
-  def build = new com.westernasset.pipeline.mavenDockerBatchBuild()
+  def build = new com.aristotlecap.pipeline.mavenDockerBatchBuild()
 
   if (lockLabel != 'null') {
     lock(label: "${lockLabel}")  {

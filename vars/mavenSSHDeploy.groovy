@@ -83,9 +83,9 @@ def call(body) {
      buildStepsString = buildStepsArray.join("\n")
   }
 
-  def build = new com.westernasset.pipeline.mavenSSHDeployBuild()
+  def build = new com.aristotlecap.pipeline.mavenSSHDeployBuild()
 
-  def commons = new com.westernasset.pipeline.Commons()
+  def commons = new com.aristotlecap.pipeline.Commons()
   def nonProdHostsMapString = commons.getStringFromMap(config.nonProdHostsMap)
 
   if (lockLabel != 'null') {

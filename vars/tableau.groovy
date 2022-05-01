@@ -83,7 +83,7 @@ def call(body) {
      deleteFromProjectsString = deleteFromProjectsArray.join("\n")
   }
 
-  def build = new com.westernasset.pipeline.tableauBuild()
+  def build = new com.aristotlecap.pipeline.tableauBuild()
 
   if (lockLabel != 'null') {
     lock(label: "${lockLabel}")  {

@@ -2,9 +2,9 @@
 
 import java.util.regex.Pattern
 
-import com.westernasset.pipeline.models.*
-import com.westernasset.pipeline.steps.*
-import com.westernasset.pipeline.builds.*
+import com.aristotlecap.pipeline.models.*
+import com.aristotlecap.pipeline.steps.*
+import com.aristotlecap.pipeline.builds.*
 
 void validate(Map config) {
     Validation validation = new Validation()

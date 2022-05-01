@@ -18,7 +18,7 @@ def call(body) {
   echo resource
   echo "builderTag = ${config.builderTag}"
 
-  def build = new com.westernasset.pipeline.terraform.vmware()
+  def build = new com.aristotlecap.pipeline.terraform.vmware()
 
   def lockLabel = "${env.lockLabel}"
   echo lockLabel

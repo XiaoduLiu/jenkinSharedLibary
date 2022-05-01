@@ -30,10 +30,10 @@ def call(body) {
      appArtifactsString = appArtifactsArray.join("\n")
   }
 
-  def commons = new com.westernasset.pipeline.Commons()
+  def commons = new com.aristotlecap.pipeline.Commons()
   def S3KeyMapString = commons.getStringFromMap(config.S3KeyMap)
 
-  def build = new com.westernasset.pipeline.mavenS3DeployBuild()
+  def build = new com.aristotlecap.pipeline.mavenS3DeployBuild()
   if (lockLabel != 'null') {
     lock(label: "${lockLabel}")  {
       build.build(
