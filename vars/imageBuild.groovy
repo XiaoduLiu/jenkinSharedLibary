@@ -8,16 +8,17 @@ def call(body) {
   body.delegate = config
   body()
 
-  def lockLabel = "${lockLabel}"
-  echo lockLabel
-
-  def build = new com.aristotlecap.pipeline.dockerImagesBuild()
-
-  if (lockLabel != 'null') {
-    lock(label: "${lockLabel}")  {
+  withFolderProperties{
+    def lockLabel = "${env.lockLabel}"
+    echo lockLabel
+    def build = new com.aristotlecap.pipeline.dockerImagesBuild()
+    if (lockLabel != 'null') {
+      lock(label: "${lockLabel}")  {
+        build.build(config)
+      }
+    } else {
       build.build(config)
     }
-  } else {
-    build.build(config)
   }
+
 }
