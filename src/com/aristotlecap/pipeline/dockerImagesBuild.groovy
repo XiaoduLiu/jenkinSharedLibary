@@ -26,9 +26,9 @@ def build(config) {
         stage('docker') {
           print config
           container('docker') {
-            config.each { k, v ->
+            config.dockerfileMap.each { k, v ->
               println "${k}:${v}"
-              
+
               //String folder = k.split("/")[0]
               //String dockerfile = k.split("/")[1]
               //println "${folder}"
