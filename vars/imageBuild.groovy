@@ -7,16 +7,16 @@ def call(body) {
   body.resolveStrategy = Closure.DELEGATE_FIRST
   body.delegate = config
   body()
-
+  withFolderProperties {
     def lockLabel = "${env.lockLabel}"
     echo lockLabel
     def build = new com.aristotlecap.pipeline.dockerImagesBuild()
     if (lockLabel != 'null') {
-      lock(label: "${lockLabel}")  {
+      lock(label: "${lockLabel}") {
         build.build(config)
       }
     } else {
       build.build(config)
     }
-
+  }
 }
