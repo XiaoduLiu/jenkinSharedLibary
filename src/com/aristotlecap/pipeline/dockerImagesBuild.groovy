@@ -32,11 +32,16 @@ def build(config) {
               String folder = k.split("/")[0]
               String dockerfile = k.split("/")[1]
               println "${folder}"
-              sh """
-                cd $folder
-                ls -la
-                docker build -t $v -f ./$dockerfile .
-              """
+
+              docker.withRegistry("https://${env.DOCKER_RELEASES}", "${env.DOCKER_RELEASES_CRED}") {
+                sh """
+                  cd $folder
+                  ls -la
+                  docker build -t $v -f ./$dockerfile .
+                  docker tag $v $env.DOCKER_RELEASES/$v
+                  docker push $env.DOCKER_RELEASES/$v 
+                """
+              }
             }
           }
         }
