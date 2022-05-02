@@ -35,10 +35,9 @@ def build(config) {
                 sh """
                   cd $folder
                   ls -la
-                  sleep 15m
                   docker run busybox nslookup awscli.amazonaws.com
                   nmcli dev show | grep 'IP4.DNS'
-                  docker build -t $v -f ./$dockerfile .
+                  docker build --network host -t $v -f ./$dockerfile .
                   docker tag $v $env.DOCKER_RELEASES/$v
                   docker push $env.DOCKER_RELEASES/$v
                 """
