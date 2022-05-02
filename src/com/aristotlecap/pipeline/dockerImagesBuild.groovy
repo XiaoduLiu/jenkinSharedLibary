@@ -35,8 +35,8 @@ def build(config) {
                 sh """
                   cd $folder
                   ls -la
-                  docker version
-                  docker version
+                  docker run busybox nslookup awscli.amazonaws.com
+                  nmcli dev show | grep 'IP4.DNS'
                   docker build -t $v -f ./$dockerfile .
                   docker tag $v $env.DOCKER_RELEASES/$v
                   docker push $env.DOCKER_RELEASES/$v
