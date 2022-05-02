@@ -36,8 +36,8 @@ def build(config) {
                   cd $folder
                   ls -la
                   docker build --network host -t $v -f ./$dockerfile .
-                  docker tag $v $env.DOCKER_RELEASES/$v
-                  docker push $env.DOCKER_RELEASES/$v
+                  docker tag $v $env.DOCKER_RELEASES/jenkins-builder:$v
+                  docker push $env.DOCKER_RELEASES/jenkins-builder:$v
                 """
               }
             }
